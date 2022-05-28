@@ -1,0 +1,28 @@
+﻿<Window x:Class="BookStoreManagement.TransactionsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BookStoreManagement"
+        mc:Ignorable="d"
+        Title="Transactions" Height="600" Width="800">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="50,50,0,0" TextWrapping="Wrap" Text="Enter ISBN" VerticalAlignment="Top" FontSize="18"/>
+        <TextBox x:Name="isbnTxt" HorizontalAlignment="Stretch" Margin="250,50,50,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" TextChanged="SearchBook" FlowDirection="RightToLeft"/>
+        <TextBlock HorizontalAlignment="Left" Margin="50,100,0,0" TextWrapping="Wrap" Text="Title" VerticalAlignment="Top" FontSize="18"/>
+        <TextBlock x:Name="titleTxt" HorizontalAlignment="Right" Margin="0,100,50,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" FlowDirection="LeftToRight"/>
+        <TextBlock HorizontalAlignment="Left" Margin="50,150,0,0" TextWrapping="Wrap" Text="Description" VerticalAlignment="Top" FontSize="18"/>
+        <TextBlock x:Name="descriptionTxt" HorizontalAlignment="Right" Margin="0,150,50,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" FlowDirection="LeftToRight"/>
+        <TextBlock x:Name="Price" HorizontalAlignment="Left" Margin="50,200,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" Text="Price"/>
+        <TextBlock x:Name="priceTxt" HorizontalAlignment="Right" Margin="0,200,50,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" FlowDirection="LeftToRight"/>
+        <TextBlock HorizontalAlignment="Left" Margin="50,350,0,0" TextWrapping="Wrap" Text="Enter Customer ID" VerticalAlignment="Top" FontSize="18"/>
+        <TextBox x:Name="customerIdTxt" HorizontalAlignment="Stretch" Margin="250,350,50,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" TextChanged="SearchCustomer" FlowDirection="RightToLeft"/>
+        <TextBlock HorizontalAlignment="Left" Margin="50,400,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" FontSize="18"/>
+        <TextBlock x:Name="nameTxt" HorizontalAlignment="Right" Margin="0,400,50,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" FlowDirection="LeftToRight"/>
+        <Button Content="Apply" HorizontalAlignment="Right" Margin="0,450,50,0" VerticalAlignment="Top" Width="100" Height="50" FontSize="20" IsDefault="True" Click="Buy"/>
+        <TextBlock HorizontalAlignment="Left" Margin="50,250,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" Text="Quantity"/>
+        <TextBox x:Name="quantityTxt" HorizontalAlignment="Right" Margin="0,250,50,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" FontSize="18" TextChanged="UpdateTotalPrice" FlowDirection="RightToLeft"/>
+        <TextBlock HorizontalAlignment="Left" Margin="50,300,0,0" TextWrapping="Wrap" Text="Total Price" VerticalAlignment="Top" FontSize="18"/>
+        <TextBlock x:Name="totalPriceTxt" HorizontalAlignment="Right" Margin="0,300,50,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" FlowDirection="LeftToRight"/>
+    </Grid>
+</Window>

@@ -1,0 +1,26 @@
+﻿<Window x:Class="BookStoreManagement.CustomersWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BookStoreManagement"
+        mc:Ignorable="d"
+        Title="Customers" Height="450" Width="1280">
+    <Grid>
+        <DataGrid x:Name="customersGrid" ItemsSource="{Binding}" Margin="640,50,50,100" FontSize="16" GridLinesVisibility="Horizontal" IsReadOnly="True" SelectionMode="Single"/>
+        <Button Content="New" HorizontalAlignment="Left" Margin="640,0,0,25" Width="100" VerticalAlignment="Bottom" Height="50" Click="NewCustomer" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="50,50,0,0" TextWrapping="Wrap" Text="Id" VerticalAlignment="Top" FontSize="18"/>
+        <TextBox x:Name="idTxt" HorizontalAlignment="Left" Margin="200,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="400" FontSize="18" TextChanged="LoadCustomer"/>
+        <TextBlock HorizontalAlignment="Left" Margin="50,100,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" FontSize="18"/>
+        <TextBlock HorizontalAlignment="Left" Margin="50,150,0,0" TextWrapping="Wrap" Text="Address" VerticalAlignment="Top" FontSize="18"/>
+        <TextBlock HorizontalAlignment="Left" Margin="50,200,0,0" TextWrapping="Wrap" Text="Phone Number" VerticalAlignment="Top" FontSize="18"/>
+        <TextBox x:Name="nameTxt" HorizontalAlignment="Left" Margin="200,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="400" FontSize="18" TextChanged="LoadCustomer"/>
+        <TextBox x:Name="addressTxt" HorizontalAlignment="Left" Margin="200,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="400" Height="25" FontSize="18" TextChanged="LoadCustomer"/>
+        <TextBox x:Name="phoneNumberTxt" HorizontalAlignment="Left" Margin="200,200,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="400" Height="25" FontSize="18" TextChanged="LoadCustomer"/>
+        <Button Content="Update" HorizontalAlignment="Left" Margin="770,0,0,25" Width="100" VerticalAlignment="Bottom" Height="50" Click="UpdateCustomer" FontSize="20"/>
+        <Button Content="Delete" HorizontalAlignment="Left" Margin="900,0,0,25" Width="100" VerticalAlignment="Bottom" Height="50" Click="DeleteCustomer" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="50,250,0,0" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" FontSize="18"/>
+        <TextBox x:Name="emailTxt" HorizontalAlignment="Left" Margin="200,250,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="400" Height="25" FontSize="18" TextChanged="LoadCustomer"/>
+        <Button Content="Clear" HorizontalAlignment="Left" Margin="500,300,0,0" VerticalAlignment="Top" Width="100" Height="50" FontSize="20" Click="Clear"/>
+    </Grid>
+</Window>

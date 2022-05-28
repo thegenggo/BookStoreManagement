@@ -1,0 +1,26 @@
+﻿<Window x:Class="BookStoreManagement.BooksWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BookStoreManagement"
+        mc:Ignorable="d"
+        Title="Books" Height="450" Width="1280">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="50,50,0,0" TextWrapping="Wrap" Text="ISBN" VerticalAlignment="Top" FontSize="18"/>
+        <TextBlock HorizontalAlignment="Left" Margin="50,100,0,0" TextWrapping="Wrap" Text="Title" VerticalAlignment="Top" FontSize="18"/>
+        <TextBlock HorizontalAlignment="Left" Margin="50,150,0,0" TextWrapping="Wrap" Text="Description" VerticalAlignment="Top" FontSize="18"/>
+        <TextBlock HorizontalAlignment="Left" Margin="50,200,0,0" TextWrapping="Wrap" Text="Price" VerticalAlignment="Top" FontSize="18"/>
+        <TextBlock HorizontalAlignment="Left" Margin="50,250,0,0" TextWrapping="Wrap" Text="Quantity" VerticalAlignment="Top" FontSize="18"/>
+        <TextBox x:Name="isbnTxt" HorizontalAlignment="Left" Margin="150,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="450" FontSize="18" TextChanged="LoadBook"/>
+        <TextBox x:Name="titleTxt" HorizontalAlignment="Left" Margin="150,100,0,0" TextWrapping="WrapWithOverflow" VerticalAlignment="Top" Width="450" FontSize="18" TextChanged="LoadBook"/>
+        <TextBox x:Name="descriptionTxt" HorizontalAlignment="Left" Margin="150,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="450" FontSize="18" TextChanged="LoadBook"/>
+        <TextBox x:Name="priceTxt" HorizontalAlignment="Left" Margin="150,200,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="450" FontSize="18" TextChanged="LoadBook"/>
+        <TextBox x:Name="quantityTxt" HorizontalAlignment="Left" Margin="150,250,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="450" FontSize="18" TextChanged="LoadBook"/>
+        <Button Content="Clear" HorizontalAlignment="Left" Margin="500,300,0,0" VerticalAlignment="Top" Width="100" Height="50" FontSize="20" Click="Clear"/>
+        <DataGrid x:Name="booksGrid" ItemsSource="{Binding}" FontSize="16" Margin="640,50,50,125" IsReadOnly="True" GridLinesVisibility="Horizontal"/>
+        <Button Content="New" HorizontalAlignment="Left" Width="100" FontSize="20" VerticalAlignment="Bottom" Height="50" Margin="640,0,0,50" Click="NewBook"/>
+        <Button Content="Update" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="100" Height="50" FontSize="20" Margin="770,0,0,50" Click="UpdateBook"/>
+        <Button Content="Delete" HorizontalAlignment="Left" Margin="900,0,0,50" VerticalAlignment="Bottom" Width="100" Height="50" FontSize="20" Click="DeleteBook"/>
+    </Grid>
+</Window>
